@@ -1,15 +1,79 @@
 <html>
-  <head>
-    <title>Hello world webpage</title>
-  </head>
- <body style="background-color:#000000">
-    <h1 style="color:white" p align="center">Good night</h1>	 
-  
-    <p>If this works as it should, you will be able to read this from any device in the world!</p>
-  <div class="preview" align="center">
-	<img src="http://www.suvasam.org/images/degree/Arts/Fine%20Arts/1288083326_132222009_1-Pictures-of--fine-arts-jobs-in-mumbai%5B1%5D.jpg" alt="10"/>
-       </div>
-	 
+<head>
 
-  </body>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Hello world webpage</title>
+<body style="background-color:black">
+    <h1 style="color:white" p align="center">Good night</h1>	
+     <h3 style="color:white" p align="right">Life is real, life is earnest. </h3>
+
+<style>
+.picutre_many img{width:200px; height:150px;}
+</style>
+</head>
+<body>
+    <div id="list" class=" picutre_many"
+        style="overflow: hidden; height: 200px; width: 680px; margin: 0 auto;">
+        <table cellspacing="0" cellpadding="0"
+            style="width: 680px; border: 0px;">
+            <tr>
+                <td id="list1">
+                    <table style="border: 0px;" cellpadding="0" cellspacing="0">
+                        <tr id="pic">
+                            <td><a href="https://en.wikipedia.org/wiki/The_Hunchback_of_Notre_Dame_(1996_film)"><img style="border: 0px;" alt="10" src="http://pic.eslite.com/Upload/Product/201004/m/634076085736398009.jpg" /></td>
+<td><a href="https://en.wikipedia.org/wiki/The_Hunchback_of_Notre_Dame_(1996_film)"><img style="border: 0px;" alt="10" src="http://pic.eslite.com/Upload/Product/201004/m/634076085736398009.jpg" /></td><td><a href="https://en.wikipedia.org/wiki/The_Hunchback_of_Notre_Dame_(1996_film)"><img style="border: 0px;" alt="10" src="http://pic.eslite.com/Upload/Product/201004/m/634076085736398009.jpg" /></td><td><a href="https://en.wikipedia.org/wiki/The_Hunchback_of_Notre_Dame_(1996_film)"><img style="border: 0px;" alt="10" src="http://pic.eslite.com/Upload/Product/201004/m/634076085736398009.jpg" /></td><td><a href="https://en.wikipedia.org/wiki/The_Hunchback_of_Notre_Dame_(1996_film)"><img style="border: 0px;" alt="10" src="http://pic.eslite.com/Upload/Product/201004/m/634076085736398009.jpg" /></td>
+                        </tr>
+                    </table>
+                </td>
+                <td id="list2"></td>
+            </tr>
+        </table>
+    </div>
+    <script type="text/javascript">
+        /*图片滚动效果*/
+        var speedpic = 20;//速度数值越大速度越慢
+        document.getElementById("list2").innerHTML = document.getElementById("list1").innerHTML;
+        function Marqueepic() {
+            if (document.getElementById("list2").offsetWidth
+                    - document.getElementById("list").scrollLeft <= 0) {
+                document.getElementById("list").scrollLeft -= document
+                        .getElementById("list1").offsetWidth;
+            } else {
+                document.getElementById("list").scrollLeft++;
+            }
+        }
+        var MyMarpic = setInterval(Marqueepic, speedpic);
+
+        document.getElementById("list").onmouseover = function() {
+            clearInterval(MyMarpic);
+        }
+        document.getElementById("list").onmouseout = function() {
+            MyMarpic = setInterval(Marqueepic, speedpic);
+        }
+    </script>
+
+ <div class="preview" align="center">
+	<img src="http://www.suvasam.org/images/degree/Arts/Fine%20Arts/1288083326_132222009_1-Pictures-of--fine-arts-jobs-in-mumbai%5B1%5D.jpg" alt="10"/>
+       </div> 
+
+<video width="320" height="240" controls="controls">
+  <source src="movie.mp4" type="video/mp4" />
+  <source src="movie.ogg" type="video/ogg" />
+  <source src="movie.webm" type="video/webm" />
+  <object data="movie.mp4" width="320" height="240">
+    <embed src="movie.swf" width="320" height="240" />
+  </object>
+</video>
+<a href="song.mp3">Play Sound</a>
+
+<script type="text/javascript" src="http://mediaplayer.yahoo.com/js">
+</script>
+
+	<a href="song1.mp3">Play Song 1</a>
+<a href="song2.mp3">Play Song 2</a> 
+	 
+	 
+   <script type="text/javascript" src="http://mediaplayer.yahoo.com/js"></script>
+
+</body>
 </html>
