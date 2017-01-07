@@ -1,11 +1,17 @@
 <html>
 <head>
+<form action="form_action.asp" method="get" style="color:white">
+  First name: <input type="text" name="fname" />
+  Last name: <input type="text" name="lname" />
+  <input type="submit" value="Submit" />
+</form>
+
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Hello world webpage</title>
 <body style="background-color:black">
-    <h1 style="color:white" p align="center">Good night</h1>	
-     <h3 style="color:white" p align="right">Life is real, life is earnest. </h3>
+    <h1 style="color:white" p align="center">Good night</h1>
+     <h3 style="color:white" p align="right"><button type="button" onclick="document.write("introduce a book")">i am feeling lucky</button>	Life is real, life is earnest. </h3>
 
 <style>
 .picutre_many img{width:200px; height:150px;}
@@ -43,7 +49,6 @@
             }
         }
         var MyMarpic = setInterval(Marqueepic, speedpic);
-
         document.getElementById("list").onmouseover = function() {
             clearInterval(MyMarpic);
         }
@@ -52,28 +57,40 @@
         }
     </script>
 
+
+
+
+
  <div class="preview" align="center">
 	<img src="http://www.suvasam.org/images/degree/Arts/Fine%20Arts/1288083326_132222009_1-Pictures-of--fine-arts-jobs-in-mumbai%5B1%5D.jpg" alt="10"/>
        </div> 
 
-<video width="320" height="240" controls="controls">
-  <source src="movie.mp4" type="video/mp4" />
-  <source src="movie.ogg" type="video/ogg" />
-  <source src="movie.webm" type="video/webm" />
-  <object data="movie.mp4" width="320" height="240">
-    <embed src="movie.swf" width="320" height="240" />
-  </object>
-</video>
-<a href="song.mp3">Play Sound</a>
-
-<script type="text/javascript" src="http://mediaplayer.yahoo.com/js">
+<script>
+window.alert("Hi ,how are you,i am doing it ,see it later             lulalalalalaヽ( ´ー)ノ");
 </script>
 
-	<a href="song1.mp3">Play Song 1</a>
-<a href="song2.mp3">Play Song 2</a> 
-	 
-	 
-   <script type="text/javascript" src="http://mediaplayer.yahoo.com/js"></script>
+<form id="frm1" action="form_action.asp" align="center"></div>
+  First name: <input type="text" name="fname" value="Donald"><br><br>
+  Last name: <input type="text" name="lname" value="Duck"><br><br>
+
+</form> 
+<div style="text-align:center" ><button onclick="myFunction()" >Try it</button></div>
+
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("frm1");
+    var text = "";
+    var i;
+    for (i = 0; i < x.length ;i++) {
+        text += x.elements[i].value + "<br>";
+    }
+    document.getElementById("demo").innerHTML = text;
+}
+</script>
+
 
 </body>
 </html>
